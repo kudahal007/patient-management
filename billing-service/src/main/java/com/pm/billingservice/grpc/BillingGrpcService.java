@@ -2,19 +2,28 @@ package com.pm.billingservice.grpc;
 
 import billing.BillingRequest;
 import billing.BillingResponse;
+<<<<<<< HEAD
 import billing.BillingServiceGrpc;
+=======
+import billing.BillingServiceGrpc.BillingServiceImplBase;
+>>>>>>> e036e29 (initial commit for patient-service)
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @GrpcService
+<<<<<<< HEAD
 public class BillingGrpcService extends BillingServiceGrpc.BillingServiceImplBase {
+=======
+public class BillingGrpcService extends BillingServiceImplBase {
+>>>>>>> e036e29 (initial commit for patient-service)
     private static final Logger log = LoggerFactory.getLogger(BillingGrpcService.class);
 
     @Override
     public void createBillingAccount(BillingRequest billingRequest,
                                      StreamObserver<BillingResponse> responseObserver) {
+<<<<<<< HEAD
         log.info("createBillingAccount request received : {}", billingRequest.toString());
 //        Business logic - e.g save to database, perform calculates etc
 
@@ -25,4 +34,17 @@ public class BillingGrpcService extends BillingServiceGrpc.BillingServiceImplBas
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }
+=======
+        log.info("createBillingAccount request={} ", billingRequest.toString());
+        // Business logic -  e.g save to database, perform calculates etc
+
+        BillingResponse response = BillingResponse.newBuilder()
+                .setAccountId("12345")
+                .setStatus("ACTIVE")
+                .build();
+        responseObserver.onNext(response);
+        responseObserver.onCompleted();
+    }
+
+>>>>>>> e036e29 (initial commit for patient-service)
 }

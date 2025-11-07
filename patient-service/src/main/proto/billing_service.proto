@@ -4,11 +4,7 @@ option java_multiple_files = true;
 option java_package = "billing";
 
 service BillingService{
-<<<<<<< HEAD
-  rpc CreateBillingAccount(BillingRequest) returns (BillingResponse);
-=======
   rpc CreateBillingAccount(BillingRequest) returns(BillingResponse);
->>>>>>> e036e29 (initial commit for patient-service)
 }
 
 message BillingRequest{
@@ -21,7 +17,4 @@ message BillingResponse{
   string accountId = 1;
   string status = 2;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> e036e29 (initial commit for patient-service)

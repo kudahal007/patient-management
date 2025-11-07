@@ -19,4 +19,8 @@ COPY --from=builder ./app/target/billing-service-0.0.1-SNAPSHOT.jar ./app.jar
 EXPOSE 4001
 EXPOSE 9001
 
+<<<<<<< HEAD
 ENTRYPOINT ["java","-jar","app.jar"]
+=======
+ENTRYPOINT ["java","-jar","app.jar"]
+>>>>>>> e036e29 (initial commit for patient-service)

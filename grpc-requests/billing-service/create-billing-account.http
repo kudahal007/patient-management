@@ -1,7 +1,17 @@
+<<<<<<< HEAD
+=======
+### GET request to example server
+>>>>>>> e036e29 (initial commit for patient-service)
 GRPC localhost:9001/BillingService/CreateBillingAccount
 
 {
   "patientId": "12333",
   "name": "John Doe",
   "email": "john.doe@example.com"
+<<<<<<< HEAD
 }
+=======
+}
+
+###
+>>>>>>> e036e29 (initial commit for patient-service)

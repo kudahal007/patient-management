@@ -9,13 +9,21 @@ import java.time.LocalDate;
 public class PatientMapper {
     public static PatientResponseDTO toDTO(Patient patient) {
         PatientResponseDTO patientResponseDTO = new PatientResponseDTO();
+<<<<<<< HEAD
         patientResponseDTO.setId(patient.getId().toString());
+=======
+        patientResponseDTO.setId(patient.getId());
+>>>>>>> e036e29 (initial commit for patient-service)
         patientResponseDTO.setName(patient.getName());
         patientResponseDTO.setAddress(patient.getAddress());
         patientResponseDTO.setEmail(patient.getEmail());
         patientResponseDTO.setDateOfBirth(patient.getDateOfBirth().toString());
         return patientResponseDTO;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> e036e29 (initial commit for patient-service)
     public static Patient toModel(PatientRequestDTO patientRequestDTO) {
         Patient patient = new Patient();
         patient.setName(patientRequestDTO.getName());
